@@ -1,0 +1,53 @@
+
+/* table { table-layout: fixed; width: 100%; }
+
+table thead td, th {border-left: 1px solid #f2f2f2; border-right: 1px solid #d5d5d5; background: #ddd url("../images/sprites4.png") repeat-x scroll 0 100% ; font-weight: bold; text-align:left;}
+table tr td, th { border:1px solid #D5D5D5; padding:15px;}
+table tr:hover { background:#fcfcfc;}
+table tr ul.actions {margin: 0;}
+table tr ul.actions li {display: inline; margin-right: 5px;} */
+table{
+	width:100%;
+	border-collapse:collapse;
+	table-layout:auto;
+	vertical-align:top;
+	margin-bottom:15px;
+	border:1px solid #CCCCCC;
+	
+	}
+
+table thead th{
+	color:#FFFFFF;
+	background-color:#06213F;
+	border:1px solid #CCCCCC;
+	border-collapse:collapse;
+	text-align:center;
+	table-layout:auto;
+	vertical-align:middle;
+	
+	
+	}
+
+table tbody td{
+	vertical-align:top;
+	border-collapse:collapse;
+	border-left:0px solid #CCCCCC;
+	border-right:0px solid #CCCCCC;
+	/*overflow: hidden;*/
+	}
+	
+table thead th, table tbody td{
+	padding:5px;
+	border-collapse:collapse;
+	
+	}
+
+table tbody tr.light{
+	color:#666666;
+	background-color:#F7F7F7;
+	}
+
+table tbody tr.dark{
+	color:#666666;
+	background-color:#E8E8E8;
+	}
