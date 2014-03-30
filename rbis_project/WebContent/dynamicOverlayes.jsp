@@ -120,20 +120,7 @@
     
 
    // map.addLayer(osm);
-    
-		
-  
    
-	/* var clon,clat;
-   map.events.register("click", map, function(e) {
-	   var position = map.getLonLatFromPixel(e.xy);
-
-	   OpenLayers.Util.getElement("nodelist").innerHTML = 
-	         position.lon.toFixed(7) + ', ' + position.lat.toFixed(7);
-
-	 }); */
-   
-   	
    for(var i=0;i<length;++i){
 	   var layer = new OpenLayers.Layer.WMS(
 			   allLayers[ i ].value,
@@ -167,13 +154,7 @@
    					getfeatureinfo: function(event) {
    					clon=(map.getLonLatFromPixel(event.xy)).lon.toFixed(7);
    					clat=(map.getLonLatFromPixel(event.xy)).lat.toFixed(7);
-   					/*if(clat==949555.6735390 && clon==8565847.1680025){
- 							event.text=event.text+"<img src=\"images/council.jpg\" height=\"200\" weight=\"125\">Council!!!";
-  						}else{
-  							
-							event.text="wrong position!!!";
-  						}*/
-   					//alert(document.forms[0].query.value);
+   					
    					map.addPopup(new OpenLayers.Popup.FramedCloud(
                    "chicken",
                    map.getLonLatFromPixel(event.xy),
