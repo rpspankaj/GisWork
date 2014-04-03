@@ -106,9 +106,10 @@
              	"KERALADISTRICT",
               	"http://localhost:8080/geoserver/wms?",
               	{layers:"geossis:KERALADISTRICT",transparent: true,format: "image/png"},
+              	{opacity:0.5},
               	{isBaseLayer: true},
-              	{'attribution': 'KERALADISTRICT'},
-              	{opacity:0.1}
+              	{'attribution': 'KERALADISTRICT'}
+              	
               );
           
     

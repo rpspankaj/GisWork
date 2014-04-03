@@ -43,18 +43,7 @@
 				<!-- ####################################################################################################### -->
 				<div id="portfolio">
 					<ul>
-						<!-- <li><img src="images/demo/420x190.gif" alt="" />
-            <h2>Metridiculis conseque quis</h2>
-            <p>Orciinterdum condimenterdum nullamcorper elit nam curabitur laoreet met praesenean et iaculum. Metridiculis conseque quis iaculum aenean nunc aenean quis nam nis dui.</p>
-            <p class="readmore"><a href="#">Read More Here &raquo;</a></p>
-          </li>
-          <li class="last"><img src="images/demo/420x190.gif" alt="" />
-            <h2>Metridiculis conseque quis</h2>
-            <p>Orciinterdum condimenterdum nullamcorper elit nam curabitur laoreet met praesenean et iaculum. Metridiculis conseque quis iaculum aenean nunc aenean quis nam nis dui.</p>
-            <p class="readmore"><a href="#">Read More Here &raquo;</a></p>
-          </li>-->
-
-						<li><img src="images/demo/420x190.gif" alt="" />
+						<li><img src="images/demo/rivermap.jpg" width="300" height="700" />
 							<h2>Metridiculis conseque quis</h2>
 							<p>Orciinterdum condimenterdum nullamcorper elit nam
 								curabitur laoreet met praesenean et iaculum. Metridiculis

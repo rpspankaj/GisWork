@@ -67,7 +67,7 @@ public class UserAction extends HttpServlet {
 			if (flag) {
 				HttpSession session = request.getSession(true);
 				Security.setId(session.getId());
-				Security.setIp_address(InetAddress.getLocalHost().toString());
+				Security.setIp_address(request.getRemoteAddr().toString());
 				//Security.setUser_name(objRbisuserTO.getUser_name());
 				session.setAttribute("currentUser", Security.getUser_name());
 				session.setAttribute("role",Security.getRole_id());
@@ -89,7 +89,7 @@ public class UserAction extends HttpServlet {
 			}
 
 			else
-				response.sendRedirect("fail.jsp?failure");
+				response.sendRedirect("forgotpassword.jsp?message_error=The username or password you entered is incorrect.");
 
 		} else if (action.equalsIgnoreCase("logout")) {
 			Utility.logout();

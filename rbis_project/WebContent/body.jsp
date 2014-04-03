@@ -73,13 +73,6 @@
         <div id="latestnews">
           <h2>Latest News &amp; Events</h2>
           <ul>
-           <li class="clear">
-              <div class="imgl"><img src="images/demo/color.jpg" width="125" height="125" /></div>
-              <div class="latestnews">
-              <p><a href="#">Kerala's traditions</a></p>
-              <p>Kathakali is a stylized classical Indian dance-drama noted for the attractive make-up of characters.</p>
-                </div>
-            </li> 
             <li class="clear">
               <div class="imgl"><img src="images/demo/hill.jpg"/></div>
               <div class="latestnews">
@@ -87,6 +80,14 @@
                 <p>NEW DELHI: Environment minister M Veerappa Moily on Wednesday refused to give any timeline on the settlement of issues regarding the implementation of an expert committee report on Western Ghats. </p>
               </div>
             </li>
+            <li class="clear">
+              <div class="imgl"><img src="images/demo/raining.jpg" width="125" height="125" /></div>
+              <div class="latestnews">
+              <p><a href="#">Kerala Monsoon</a></p>
+              <p>Indian Monsoon Starts Around month of june and Kerala gets the early rains. Kerala's annual rainfall high.</p>
+                </div>
+            </li> 
+           
         <!--    <li class="last clear">
               <div class="imgl"><img src="images/demo/water.jpg" width="125" height="125" alt="" /></div>
               <div class="latestnews">
@@ -100,8 +101,10 @@
         <!-- ###### -->
         <div id="right_column">
           <div class="holder">
-            <h2>Virtual Tour</h2>
-            <a href="#"><img src="images/demo/logo1.gif" width="230" height="236"/></a> </div>
+            <h2>House Boat</h2>
+            <a href="#"><img src="images/demo/boathouse.jpg" width="230" height="130"/></a> </div>
+            <h2>Kerala Tradition</h2>
+            <a href="#"><img src="images/demo/color.jpg" width="230" height="130"/></a> </div>
          <!--  <div class="holder">
             <h2>Quick Information</h2>
             <div class="apply"><a href="#"><img src="images/demo/100x100.gif" alt="" /> <strong>Make An Application</strong></a></div>
@@ -187,4 +190,3 @@
      --> 
     </div>
   </div>
-</div>

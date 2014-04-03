@@ -22,11 +22,13 @@ String str1="dark";
 %>
 
 <div class="wrapper row3">
+
   <div class="rnd">
+  <div align="center" style="color: red"><%=request.getParameter("message_error") %></div>
     <div id="container" class="clear">
       <!-- ####################################################################################################### -->
       <div id="content">
-        				<h1>Retrieve Password </h1>
+        				<h1>Retrieve Password </h1> 
 				<img class="imgr" src="images/demo/contact.jpg" alt="" width="125"
 					height="125" />
 				<p>Kerala State Remote Sensing And Environment Centre
@@ -44,15 +46,7 @@ String str1="dark";
 					the River Basins and water sheds <a href="index.jsp"><strong>River Basin Information system.</strong>
 					</a> RBIS is a user friendly software through which you can easily get location of the River Basins of Kerala state.
 				</p>
-				<!--<p>
-					You can give your comments. If you are interested in RBIS 
-					than join us,<strong>register yourself on our website.
-					</strong> You will get your confirmation of joining on your mail.
-				</p>
-				 <p>If you have any information about River Basins of Kerala State
-				that still unknown to us than share with us.If your information is useful for us than we will make
-				that available on our website. </p>
-				 -->
+				
         
         
         <form action="CommonAction?action=forgotpassword" method="post" id="regForm">
@@ -81,23 +75,7 @@ String str1="dark";
 							</table>
 						</form>
         
-        
-      <!-- <form action="CommonAction?action=forgotpassword" method="post">
-<table>
-<tr>
-				<td>Enter Email ID</td>
-				<td><input type="text" name="email" id="email"></td>
-			</tr>
-			<tr>
-				<td><input type="submit" name="submit" value="Get Password"></td>
-				<td><input type="reset" name="reset" value="Clear"></td>
-			</tr>
 
-
-		</table>
-</form>
-
- --> 
       </div>
        <div id="column">
         	<div id="featured">
@@ -116,26 +94,7 @@ String str1="dark";
 							</p></li>
 					</ul>
 				</div>
-				<!-- <div class="holder">
-					<h2>Data Use Policy</h2>
-					<p>Information we receive and how it is used
-						Learn about the types of information we 
-						receive, and how that information is used.</p>
-					<ul>
-						
-						<li>Sharing and finding data </li>
-						<li><a href="#">Spatial and non-spatial data</a>
-						</li>
-					</ul>
-					<p>
-						Learn about things like local bodies
-						 and how information is shared.
-						
-						</p>
-					<p class="readmore">
-						<a href="#">Continue Reading &raquo;</a>
-					</p>
-				</div>  -->  
+				 
 		    </div>
 		    
       <!-- ####################################################################################################### -->

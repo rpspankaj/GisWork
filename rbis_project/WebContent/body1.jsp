@@ -1,4 +1,4 @@
-	<div class="wrapper col3">
+<div class="wrapper col3">
 		<div id="homecontent">
 			<div class="fl_left">
 				<div class="column2">

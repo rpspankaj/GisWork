@@ -47,7 +47,7 @@
       <!-- ####################################################################################################### -->
       <div id="content">
         				<h1>Contact Us</h1>
-				<img class="imgr" src="images/demo/contact.jpg" alt="" width="125"
+				<img class="imgr" src="images/demo/contact.gif" alt="" width="125"
 					height="125" />
 				<p>Kerala State Remote Sensing And Environment Centre
 				Vikas Bhavan, Thiruvananthapuram-33.</p>
@@ -57,7 +57,7 @@
 					Kerala is also known for its overall high performance in
 					the literacy and health standards in country. 
 				</p>
-				<img class="imgl" src="images/demo/imgl.gif" alt="" width="125"
+				<img class="imgl" src="images/demo/text.gif" alt="" width="125"
 					height="125" />
 				<p>
 					KRSEC, Vikas Bhavan ,Thiruvananthapuram provides online facility to know about
@@ -144,9 +144,8 @@
 					<ul>
 						<li>
 							<h2>Aim Of RBIS</h2>
-							<p class="imgholder">
-								<img src="images/demo/240x90.gif" alt="" />
-							</p>
+								<img src="images/demo/rbis1.jpg" width="240" height="240" />
+				
 							<p>The Project aim is to develop an online web 
 							application that complete information of RiverBasins 
 							and help to plan welfare projects 
@@ -156,7 +155,7 @@
 							</p></li>
 					</ul>
 				</div>
-				<div class="holder">
+<!-- 				<div class="holder">
 					<h2>Data Use Policy</h2>
 					<p>Information we receive and how it is used
 						Learn about the types of information we 
@@ -175,7 +174,8 @@
 					<p class="readmore">
 						<a href="#">Continue Reading &raquo;</a>
 					</p>
-				</div>      </div>
+				</div>      -->
+				 </div>
       <!-- ####################################################################################################### -->
       <!-- ####################################################################################################### -->
     </div>

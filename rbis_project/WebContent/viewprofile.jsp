@@ -47,7 +47,7 @@
             <p class="readmore"><a href="#">Read More Here &raquo;</a></p>
           </li>-->
 
-						<li><img src="images/demo/420x190.gif" alt="" />
+						<li><img src="images/demo/rivermap.jpg" alt="" />
 							<h2>Metridiculis conseque quis</h2>
 							<p>Orciinterdum condimenterdum nullamcorper elit nam
 								curabitur laoreet met praesenean et iaculum. Metridiculis
@@ -59,7 +59,7 @@
 
 								<fieldset>
 									<legend>Registration Info:</legend>
-									<table align="center">
+					                <table bgcolor="#06213F" style="font: medium; color: white">
 										<tr>
 											<td>User name:</td>
 											<td><input type="text" name="user_name" value="<%=session.getAttribute("currentUser")%>" readonly="readonly"></td>
@@ -97,7 +97,7 @@
 											<td><input type="text" name="lname" value="<%=session.getAttribute("lname") %>"></td>
 										</tr>
 										<tr>
-											<td><input type="submit" name="submit" value="Register"></td>
+											<td><input type="submit" name="submit" value="update"></td>
 											<td><input type="reset" name="reset"></td>
 										</tr>
 
