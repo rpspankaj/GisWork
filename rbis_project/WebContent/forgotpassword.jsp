@@ -24,21 +24,16 @@ String str1="dark";
 <div class="wrapper row3">
 
   <div class="rnd">
-  <div align="center" style="color: red"><%=request.getParameter("message_error") %></div>
+  <div align="center" style="color: red">
+  
+  <%if(request.getParameter("message_error")!=null){ %>
+  			<%=request.getParameter("message_error")%>
+  		<%} %></div>
     <div id="container" class="clear">
       <!-- ####################################################################################################### -->
       <div id="content">
         				<h1>Retrieve Password </h1> 
-				<img class="imgr" src="images/demo/contact.jpg" alt="" width="125"
-					height="125" />
-				<p>Kerala State Remote Sensing And Environment Centre
-				Vikas Bhavan, Thiruvananthapuram-33.</p>
-				<p>
-					The state of kerala known as <a href="http://en.wikipedia.org/wiki/God's_Own_Country" target="_balank">'God's own country'</a> 
-					for it's natural beauty, rich rare medicinal plants, inherited culture and Art.
-					Kerala is also known for its overall high performance in
-					the literacy and health standards in country. 
-				</p>
+
 				<img class="imgl" src="images/demo/imgl.gif" alt="" width="125"
 					height="125" />
 				<p>
@@ -66,7 +61,7 @@ String str1="dark";
 									</tr>
 									<tr class="<%=str1%>">
 										<td><input type="submit" value="submit"></td>
-										
+										<td></td>
 										<%-- <td><div id="retrievePassword" ><%=message %></div></td> --%>
 										
 									</tr>

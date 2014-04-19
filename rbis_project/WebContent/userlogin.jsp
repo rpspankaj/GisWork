@@ -13,7 +13,7 @@
 		
 			<div id=""><b>Available RBIS </b>
 			
-					<%@include file="newOverlayes.html" %>
+					<%@include file="dynamicOverlayes.jsp" %>
 			</div>
 </div>
 <%@ include file="footer.jsp" %>

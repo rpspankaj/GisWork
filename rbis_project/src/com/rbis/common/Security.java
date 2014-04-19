@@ -13,6 +13,13 @@ public class Security {
 	private static HttpServletRequest request;
 	private static String id;
 	private static String phone;
+	private static String gender;
+	public static String getGender() {
+		return gender;
+	}
+	public static void setGender(String gender) {
+		Security.gender = gender;
+	}
 	private static Timestamp modified_date;
 	private static int user_id;
 	public static int getUser_id() {

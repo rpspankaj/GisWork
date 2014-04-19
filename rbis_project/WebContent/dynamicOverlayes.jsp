@@ -50,9 +50,7 @@
 	/*While facing any problem in to depict your own layer along with the existing layers you can directly contact me on rpspankaj2010@gmail.com*/
 	var layer;
 	function addLayer(){
-		
-		
-		
+	
 	var allLayers = document.getElementsByName("allLayers");
 	
 	var length = allLayers.length;

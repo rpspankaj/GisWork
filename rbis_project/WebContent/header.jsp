@@ -19,7 +19,7 @@
       
       <form method="post" action="useraction.rbis?action=list">
 		
-		 <fieldset><strong>UserName </strong>&emsp;&emsp;&emsp;&emsp;<strong>Password</strong></fieldset>
+		 <fieldset><strong>&nbsp;UserName </strong>&emsp;&emsp;&emsp;&nbsp;&nbsp;<strong>Password</strong></fieldset>
 		 <fieldset>	
 				<input type="text" name="user_name" id="user_name" />
 				<input type="password" name="password" id="password" />
@@ -27,7 +27,7 @@
 			
 		 </fieldset>
 	<fieldset>
-	<a href="forgotpassword.jsp"><strong>forgot password</strong></a>
+	<a href="forgotpassword.jsp"><strong>Forgot Password</strong></a>
 	</fieldset>
 	</form>
 	   </div>

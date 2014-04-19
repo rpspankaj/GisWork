@@ -82,7 +82,7 @@
 										</tr>
 									    <tr>
 											<td>Gender</td>
-											<td><input type="text" name="dob"></td>
+											<td><input type="text" name="gender" value="<%=session.getAttribute("gender")%>"></td>
 										</tr> 
 										<tr>
 											<td>Phone</td>

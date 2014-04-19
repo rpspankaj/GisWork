@@ -56,10 +56,14 @@ public class UserAction extends HttpServlet {
 			objRbisuserTO.setPhone(phone);
 			objRbisuserTO.setCreator_id(1);
 			flag = Utility.registration(objRbisuserTO);
-			if (flag)
-				response.sendRedirect("viewprofile.jsp?sucess");
+			if (flag && action.equalsIgnoreCase("save")){
+						response.sendRedirect("userregistration.jsp?sucessreg=Registered Successfully..!!!");
+				
+			}else if(flag && action.equalsIgnoreCase("update")){
+						response.sendRedirect("viewprofile.jsp?sucess=Profile Updated Successfully..!!!");
+			}
 			else
-				response.sendRedirect("viewprofile.jsp?failure");
+				response.sendRedirect("userregistration.jsp?sucessreg=Some Exception occurred Contact Your Admin");
 
 		} else if (action.equalsIgnoreCase("list")) {
 
@@ -79,6 +83,7 @@ public class UserAction extends HttpServlet {
 				session.setAttribute("phone",Security.getPhone());
 				session.setAttribute("fname",Security.getFname());
 				session.setAttribute("lname",Security.getLname());
+				session.setAttribute("gender",Security.getGender());
 				Utility.logindetail();
 				if(role_id==1){
 					response.sendRedirect("mainbody.jsp?sucess");

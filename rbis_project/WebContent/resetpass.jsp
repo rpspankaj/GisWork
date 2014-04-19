@@ -28,16 +28,6 @@ String str1="dark";
       <!-- ####################################################################################################### -->
       <div id="content">
         				<h1>Retrieve Password </h1>
-				<img class="imgr" src="images/demo/contact.jpg" alt="" width="125"
-					height="125" />
-				<p>Kerala State Remote Sensing And Environment Centre
-				Vikas Bhavan, Thiruvananthapuram-33.</p>
-				<p>
-					The state of kerala known as <a href="http://en.wikipedia.org/wiki/God's_Own_Country" target="_balank">'God's own country'</a> 
-					for it's natural beauty, rich rare medicinal plants, inherited culture and Art.
-					Kerala is also known for its overall high performance in
-					the literacy and health standards in country. 
-				</p>
 				<img class="imgl" src="images/demo/imgl.gif" alt="" width="125"
 					height="125" />
 				<p>
@@ -73,8 +63,9 @@ String str1="dark";
 				<td><input type="password" name="rtypassword" id="rtypassword" class="validate[required,equals[newpassword]]"></td>
 			</tr>
 			<tr class=<%=str%>>
-				<td><input type="submit" name="save" value="Save"></td>
+				<td><input type="submit" name="save" value="Reset"></td>
 				<td><input type="reset" name="clear" value="Clear"></td>
+				<td></td>
 			</tr>
        </tbody>		
 
@@ -126,25 +117,6 @@ String str1="dark";
 							</p></li>
 					</ul>
 				</div>
-				<div class="holder">
-					<h2>Data Use Policy</h2>
-						<p>Information we receive and how it is used
-						Learn about the types of information we 
-						receive, and how that information is used.</p>
-					<ul>
-						
-						<li>Sharing and finding data </li>
-						<li><a href="#">Spatial and non-spatial data</a>
-						</li>
-					</ul>
-					<p>
-						Learn about things like local bodies
-						 and how information is shared.
-						
-						</p>
-					<p class="readmore">
-						<a href="#">Continue Reading &raquo;</a>
-					</p>
 				</div>      </div>
       <!-- ####################################################################################################### -->
       <!-- ####################################################################################################### -->

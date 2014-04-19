@@ -149,7 +149,7 @@
 							<p>The Project aim is to develop an online web 
 							application that complete information of RiverBasins 
 							and help to plan welfare projects 
-							in the state and build modern sports facilities.</p>
+							in the state and build modern facilities.</p>
 							<p class="readmore">
 								<a href="#">Continue Reading &raquo;</a>
 							</p></li>

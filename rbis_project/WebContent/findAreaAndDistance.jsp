@@ -1,15 +1,51 @@
+<%@ include file="header.jsp" %>
+<%@ include file="menu.jsp" %>
+<%@page import="java.sql.*"%>
+<%@page import="com.rbis.listner.*"%>
+
+
+
+<%
+	Connection connection = null;
+	PreparedStatement pst = null;
+	ResultSet rs = null;
+	String qry = "select TRIM(localbody),id from t_riveravailabledata";
+	int i = 0;
+%>
+
+<%
+	connection = DatabaseConnection.getConnection();
+	pst = connection.prepareStatement(qry);
+	rs = pst.executeQuery();
+%>
+<%
+	while (rs.next()) {
+%>
+<input type="hidden" name="allLayers" id="<%=rs.getString(2)%>"
+	value=<%=rs.getString(1)%>>
+<%
+	}
+%>
+
+
+
 <html>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<link rel="stylesheet" href="theme/default/google.css" type="text/css">
+
+<!--  <link rel="stylesheet" href="theme/default/style.css" type="text/css">-->
+<script
+	src='http://maps.google.com/maps?file=api&amp;v=2&amp;key=AIzaSyCZkyRi_n_mfMIq6uEdKDWaxt09t6bB-OE'></script>
+<script src="OpenLayers.js"></script>
+<script type="text/javascript">
     
-     <link rel="stylesheet" href="theme/default/google.css" type="text/css">
-   
-    <!--  <link rel="stylesheet" href="theme/default/style.css" type="text/css">-->
-     <script src='http://maps.google.com/maps?file=api&amp;v=2&amp;key=AIzaSyCZkyRi_n_mfMIq6uEdKDWaxt09t6bB-OE'></script>
-    <script src="OpenLayers.js"></script>
-    <script type="text/javascript">
+
+	
+    	
         var map, measureControls;
-        function init(){
+        function init(){debugger;
         	  var geographic = new OpenLayers.Projection("EPSG:4326");
               var mercator = new OpenLayers.Projection("EPSG:900913");
 
@@ -75,33 +111,34 @@
 					 
 
                 );
-            
+                
+                
+               
             //end of 4 base layers
                       
-           var achabound=new OpenLayers.Layer.WMS(
-                  	"achabound",
-                  	"http://localhost:8080/geoserver/wms?",
-                  	{layers:"rbis:achabound",transparent: true},
-                  	{'attribution': 'boundry'},
-                  	{visibility: true}
-                     );
-              var achdrainp=new OpenLayers.Layer.WMS(
-                  	"achdrainp",
-                  	"http://localhost:8080/geoserver/wms?",
-                  	{layers:"rbis:achdrainp",transparent: true},
-                  	{'attribution': 'boundry'},
-                  	{visibility: false}
-                     );
-              var akdrainl=new OpenLayers.Layer.WMS(
-                  	"akdrainl",
-                  	"http://localhost:8080/geoserver/wms?",
-                  	{layers:"rbis:akdrainl",transparent: true},
-                  	{'attribution': 'boundry'},
-                  	{visibility: false}
-                     );
+          
+               var layer;
+               var allLayers = document.getElementsByName("allLayers");
+               var length = allLayers.length;
+                for(var i=0;i<length;++i){
+                	layer =allLayers[ i ].value;
+                }
+               
+               
+               
+                for(var i=0;i<length;++i){
+             	   layer = new OpenLayers.Layer.WMS(
+             			   allLayers[ i ].value,
+             		        "http://localhost:8080/geoserver/wms?",
+             		        {layers:"rbis:"+allLayers[ i ].value,transparent: true},
+             		        
+             		        {visibility: false}
+             		    );
+             	   
+                		map.addLayers([osm,gphy,gmap,ghyb,gsat,layer,Tvm]);
+                }
               
-              
-           map.addLayers([osm,gphy,gmap,ghyb,gsat,Tvm,achabound,achdrainp]);
+          
            map.addControl(new OpenLayers.Control.LayerSwitcher());
            map.addControl(new OpenLayers.Control.MousePosition());
            
@@ -220,48 +257,42 @@
             }
         }
     </script>
-  </head>
-  <body onload="init()">
-    <h1 id="title">Measure Area and Distance</h1>
-    <div id="tags">
-       
-    </div>
-    
-    <div id="map" class="smallmap"></div>
-    <div id="options">
-        <div id="output">
-        </div>
-        <ul id="controlToggle">
-            <li>
-                <input type="radio" name="type" value="none" id="noneToggle"
-                       onclick="toggleControl(this);" checked="checked" />
-                <label for="noneToggle">navigate</label>
-            </li>
-            <li>
-                <input type="radio" name="type" value="line" id="lineToggle" onclick="toggleControl(this);" />
-                <label for="lineToggle">measure distance</label>
-            </li>
-            <li>
-                <input type="radio" name="type" value="polygon" id="polygonToggle" onclick="toggleControl(this);" />
-                <label for="polygonToggle">measure area</label>
-            </li>
-            <li>
-                <input type="checkbox" name="geodesic" id="geodesicToggle" onclick="toggleGeodesic(this);" />
-                <label for="geodesicToggle">use geodesic measures</label>
-            </li>
-            <li>
-                <input type="checkbox" name="immediate" id="immediateToggle" onclick="toggleImmediate(this);" />
-                <label for="immediateToggle">use immediate measures</label>
-            </li>
-        </ul>
-        <p>Note that the geometries drawn are planar geometries and the
-        metrics returned by the measure control are planar measures by
-        default.  If your map is in a geographic projection or you have the
-        appropriate projection definitions to transform your geometries into
-        geographic coordinates, you can set the "geodesic" property of the control
-        to true to calculate geodesic measures instead of planar measures.
-        Also you have the possibility to set the "immediate" property to true
-        to get a new calculated value once the mouse has been mooved.</p>
-    </div>
-  </body>
+</head>
+<div class="wrapper">
+<body onload="init()">
+	<h1 id="title">Measure Area and Distance</h1>
+	<div id="tags"></div>
+
+	<div id="map" class="smallmap"></div>
+	<div id="options">
+		<div id="output"></div>
+		<ul id="controlToggle">
+			<li><input type="radio" name="type" value="none" id="noneToggle"
+				onclick="toggleControl(this);" checked="checked" /> <label
+				for="noneToggle">navigate</label></li>
+			<li><input type="radio" name="type" value="line" id="lineToggle"
+				onclick="toggleControl(this);" /> <label for="lineToggle">measure
+					distance</label></li>
+			<li><input type="radio" name="type" value="polygon"
+				id="polygonToggle" onclick="toggleControl(this);" /> <label
+				for="polygonToggle">measure area</label></li>
+			<li><input type="checkbox" name="geodesic" id="geodesicToggle"
+				onclick="toggleGeodesic(this);" /> <label for="geodesicToggle">use
+					geodesic measures</label></li>
+			<li><input type="checkbox" name="immediate" id="immediateToggle"
+				onclick="toggleImmediate(this);" /> <label for="immediateToggle">use
+					immediate measures</label></li>
+		</ul>
+		<p>Note that the geometries drawn are planar geometries and the
+			metrics returned by the measure control are planar measures by
+			default. If your map is in a geographic projection or you have the
+			appropriate projection definitions to transform your geometries into
+			geographic coordinates, you can set the "geodesic" property of the
+			control to true to calculate geodesic measures instead of planar
+			measures. Also you have the possibility to set the "immediate"
+			property to true to get a new calculated value once the mouse has
+			been mooved.</p>
+	</div>
+</body>
+</div>
 </html>
