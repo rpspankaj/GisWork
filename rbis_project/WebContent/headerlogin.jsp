@@ -1,4 +1,7 @@
-
+<% response.setHeader("Cache-Control","no-cache"); //HTTP 1.1 
+ response.setHeader("Pragma","no-cache"); //HTTP 1.0 
+ response.setDateHeader ("Expires", 0); //prevents caching at the proxy server  
+%>
 <html >
 <head >
 <title>RBIS|GIS</title>
@@ -25,8 +28,8 @@
 		 <fieldset>	
 			<h4 style="color: white;">
 			<%if(session.getAttribute("currentUser")!=null){ %>
-				Welcome <%=session.getAttribute("name") %>
-				<a href="#" ><button type="submit">Sign Out</button><!-- <input type="submit" value="Sign Out" id="submit" > --></a></h4>
+				<strong>Welcome&emsp;</strong><%=session.getAttribute("name") %>
+				&emsp;&emsp;<a href="#" ><button type="submit">Sign Out</button></a></h4>
 			<%} %>
 		 </fieldset>
 	

@@ -32,9 +32,9 @@ public class EmailSender {
 
             public void run() {
                 try {
-                fromAddress = "\"RBIS\"<ashishkumargautam99@gmail.com>";
-                username = "ashishkumargautam99@gmail.com";
-                password = "agautam111";
+                fromAddress = "\"RBIS\"<rbiskerala@gmail.com>";
+                username = "rbiskerala@gmail.com";
+                password = "rbis@123";
                 Properties properties = System.getProperties();
 
                 //properties.setProperty("http.proxyHost", "172.16.50.1");

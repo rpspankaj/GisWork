@@ -8,7 +8,7 @@
         <li><a href="findAreaAndDistance.jsp">Measurement</a></li>
         <li><a href="userregistration.jsp">Registration</a></li>
         <li><a href="feedbackUnregister.jsp">Feedback</a></li>
-        <li><a href="#">About us</a></li>
+        <li><a href="aboutus.jsp">About us</a></li>
       </ul>
     </div>
    

@@ -128,6 +128,8 @@
                    	{'attribution': 'PhysicalEdn'}
                    );
            
+          
+           
            /*var KERALADISTRICT=new OpenLayers.Layer.WMS(
                  	"KERALADISTRICT",
                   	"http://localhost:8080/geoserver/wms?",
@@ -181,17 +183,22 @@
            });
            	map.addControl(info);
            	info.activate();
+           	
+           	
+             new google.maps.Marker({
+                position: new google.maps.LatLng(8.5,76.9),
+                map: map
+          });
          }  
-      
-           
-           map.addControl(new OpenLayers.Control.EditingToolbar(Tvm));		
+           		
+          // map.addControl(new OpenLayers.Control.EditingToolbar(Tvm));		
 			
-           map.addLayers([osm,gphy,gmap,ghyb,gsat,KERALADISTRICT,DrainPolygon,achabound,achdrainp,akdrainl]);
+           map.addLayers([osm,gphy,gmap,ghyb,gsat]);
            map.setCenter(tvm_center,6);
-                  
+           //addMarker(tvm_center);      
             map.addControl(new OpenLayers.Control.LayerSwitcher());
             map.addControl(new OpenLayers.Control.MousePosition());
-
+            
             map.addControl(featureInfo);
             featureInfo.activate();
            

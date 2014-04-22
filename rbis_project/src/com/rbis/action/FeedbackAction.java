@@ -42,9 +42,10 @@ public class FeedbackAction extends HttpServlet {
         		objRbisFeedbackTO.setSubject(subject);
         		       flag=Utility.feedback(objRbisFeedbackTO);
         			if(flag)
-        				response.sendRedirect("contactus.jsp?success");
+        				response.sendRedirect("contactus.jsp?feedback=Feedback Posted Successfully !!! ");
+        			    
         			else
-        				response.sendRedirect("contactus.jsp?failure");
+        				response.sendRedirect("contactus.jsp?feedback=Some Error Occurred !!!");
         		
     		
     		}

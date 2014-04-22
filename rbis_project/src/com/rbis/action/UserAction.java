@@ -25,6 +25,10 @@ public class UserAction extends HttpServlet {
 			HttpServletResponse response) throws ServletException, IOException {
 		// SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
 		boolean flag = false;
+		int outside=0;
+		if(request.getParameter("outside")!=null){
+			outside=Integer.parseInt(request.getParameter("outside"));
+		}
 		String action = request.getParameter("action");
 		RbisuserTO objRbisuserTO = new RbisuserTO();
 		String user_name = request.getParameter("user_name");
@@ -32,21 +36,21 @@ public class UserAction extends HttpServlet {
 		objRbisuserTO.setUser_name(user_name);
 		objRbisuserTO.setPassword(password);
 		int role_id = 0;
-		if (action.equalsIgnoreCase("save") || action.equalsIgnoreCase("update")) {
+		if (action.equalsIgnoreCase("save")
+				|| action.equalsIgnoreCase("update")) {
 
 			String email_id = request.getParameter("email_id");
 			String fname = request.getParameter("fname");
 			String lname = request.getParameter("lname");
 			String phone = request.getParameter("phone");
-			String gender=request.getParameter("gender");
-			//String dob=request.getParameter("dob");
-			
-   
+			String gender = request.getParameter("gender");
+			// String dob=request.getParameter("dob");
+
 			if (request.getParameter("role_id") != null)
 				role_id = Integer.parseInt(request.getParameter("role_id"));
 
-			objRbisuserTO.setAction(action); 
-			//objRbisuserTO.setDob(Timestamp.valueOf(dob));
+			objRbisuserTO.setAction(action);
+			// objRbisuserTO.setDob(Timestamp.valueOf(dob));
 			objRbisuserTO.setEmail_id(email_id);
 			objRbisuserTO.setFname(fname);
 			objRbisuserTO.setLname(lname);
@@ -56,14 +60,36 @@ public class UserAction extends HttpServlet {
 			objRbisuserTO.setPhone(phone);
 			objRbisuserTO.setCreator_id(1);
 			flag = Utility.registration(objRbisuserTO);
-			if (flag && action.equalsIgnoreCase("save")){
-						response.sendRedirect("userregistration.jsp?sucessreg=Registered Successfully..!!!");
-				
-			}else if(flag && action.equalsIgnoreCase("update")){
-						response.sendRedirect("viewprofile.jsp?sucess=Profile Updated Successfully..!!!");
-			}
-			else
+			if (flag && action.equalsIgnoreCase("save") && outside == 1) {
+				response.sendRedirect("userregistration.jsp?sucessreg=Registered Successfully..!!!");
+
+			} else if (!flag && action.equalsIgnoreCase("save") && outside == 1) {
 				response.sendRedirect("userregistration.jsp?sucessreg=Some Exception occurred Contact Your Admin");
+
+			} else if (flag && action.equalsIgnoreCase("update")
+					&& Security.getRole_id() == 1) {
+				response.sendRedirect("viewprofile.jsp?sucessreg=Profile Updated Successfully..!!!");
+			} else if (!flag && action.equalsIgnoreCase("update")
+					&& Security.getRole_id() == 1) {
+				response.sendRedirect("viewprofile.jsp?sucessreg=Some Exception occurred Contact Your Admin");
+
+			} else if (!flag && action.equalsIgnoreCase("save")
+					&& Security.getRole_id() == 1) {
+				response.sendRedirect("adminRegistration.jsp?sucessreg=Some Exception occurred Contact Your Admin");
+			} else if (flag && action.equalsIgnoreCase("save")
+					&& Security.getRole_id() == 1) {
+				response.sendRedirect("adminRegistration.jsp?sucessreg=Successfully Registered...!!!");
+			}
+
+			else if (flag && action.equalsIgnoreCase("update")
+					&& Security.getRole_id() == 2) {
+				response.sendRedirect("viewprofileuser.jsp?sucessreg=Profile Updated Successfully..!!!");
+			}
+
+			else if (!flag && action.equalsIgnoreCase("update")
+					&& Security.getRole_id() == 2) {
+				response.sendRedirect("viewprofileuser.jsp?sucessreg=Some Exception occurred Contact Your Admin");
+			}
 
 		} else if (action.equalsIgnoreCase("list")) {
 
@@ -72,23 +98,22 @@ public class UserAction extends HttpServlet {
 				HttpSession session = request.getSession(true);
 				Security.setId(session.getId());
 				Security.setIp_address(request.getRemoteAddr().toString());
-				//Security.setUser_name(objRbisuserTO.getUser_name());
+				// Security.setUser_name(objRbisuserTO.getUser_name());
 				session.setAttribute("currentUser", Security.getUser_name());
-				session.setAttribute("role",Security.getRole_id());
-				role_id=Security.getRole_id();
+				session.setAttribute("role", Security.getRole_id());
+				role_id = Security.getRole_id();
 				session.setAttribute("password", Security.getPassword());
 				session.setAttribute("email", Security.getEmail());
 				session.setAttribute("name", Security.getFname() + " "
 						+ Security.getLname());
-				session.setAttribute("phone",Security.getPhone());
-				session.setAttribute("fname",Security.getFname());
-				session.setAttribute("lname",Security.getLname());
-				session.setAttribute("gender",Security.getGender());
+				session.setAttribute("phone", Security.getPhone());
+				session.setAttribute("fname", Security.getFname());
+				session.setAttribute("lname", Security.getLname());
+				session.setAttribute("gender", Security.getGender());
 				Utility.logindetail();
-				if(role_id==1){
+				if (role_id == 1) {
 					response.sendRedirect("mainbody.jsp?sucess");
-				}
-				else{
+				} else {
 					response.sendRedirect("userlogin.jsp?sucess");
 				}
 			}

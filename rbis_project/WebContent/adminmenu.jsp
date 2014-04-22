@@ -8,8 +8,9 @@
       <ul>
         <li class="active"><a href="mainbody.jsp">Home</a></li>
         <li><a href="viewprofile.jsp">Profile setting</a></li>
-        <li><a href="userdetailjsp.jsp">User setting</a></li>
+        <li><a href="deleteUser.jsp">User setting</a></li>
         <li><a href="deleteComments.jsp">Feedback setting</a></li>
+        <li><a href="adminRegistration.jsp">Register</a></li>
         <li><a href="updateInformationAdmin.jsp">Add Information</a></li>
         <li><a href="logdetails.jsp">Log Details</a></li>
       </ul>

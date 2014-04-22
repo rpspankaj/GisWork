@@ -43,11 +43,16 @@
 
 <div class="wrapper row3">
   <div class="rnd">
+  
+  <div align="center" style="color: red">
+<%if(request.getParameter("feedback")!=null){ %>
+					<%=request.getParameter("feedback") %>
+				<%} %></div>
     <div id="container" class="clear">
       <!-- ####################################################################################################### -->
       <div id="content">
-        				<h1>Contact Us</h1>
-				<img class="imgr" src="images/demo/contact.gif" alt="" width="125"
+        			<h1><font color=#02ACEE >Give Feedback</font></h1>
+				<img class="imgr" src="images/demo/vikas-bhavan.jpg" alt="" width="125"
 					height="125" />
 				<p>Kerala State Remote Sensing And Environment Centre
 				Vikas Bhavan, Thiruvananthapuram-33.</p>
@@ -57,7 +62,7 @@
 					Kerala is also known for its overall high performance in
 					the literacy and health standards in country. 
 				</p>
-				<img class="imgl" src="images/demo/text.gif" alt="" width="125"
+				<img class="imgl" src="images/demo/email-send.ico" alt="" width="125"
 					height="125" />
 				<p>
 					KRSEC, Vikas Bhavan ,Thiruvananthapuram provides online facility to know about
@@ -72,10 +77,10 @@
 				<p>If you have any information about River Basins of Kerala State
 				that still unknown to us than share with us.If your information is useful for us than we will make
 				that available on our website. </p>
-				
+				<h1></h1>
       
         <div id="comments">
-          <h2>Comments</h2>
+          <font color=#02ACEE ><h1>Comments</h1></font>
           <ul class="commentlist" id="commentlist">
             
           </ul>
@@ -86,20 +91,20 @@
 		<table>
 			<tr>
 				<td>Email ID:</td>
-				<td><input type="text" name="emailid" id="emailid" class="validate[required]"></td>
+				<td><input type="text" name="emailid" id="emailid" class="validate[required,custom[email]]"></td>
 			</tr>
 			
 			<tr>
 				<td>Name:</td>
-				<td><input type="text" name="name" id="name" class="validate[required]"></td>
+				<td><input type="text" name="name" id="name" class="validate[required,custom[onlyLetterSp],minSize[6]]"></td>
 			</tr>
 			<tr>
 				<td>Phone:</td>
-				<td><input type="text" name="phone" id="phone"></td>
+				<td><input type="text" name="phone" id="phone" class="validate[required,custom[phone],minSize[10],maxSize[12]]"></td>
 			</tr>
 			<tr>
 				<td>Subject:</td>
-				<td><input type="text" name="subject" id="subject"></td>
+				<td><input type="text" name="subject" id="subject" class="validate[required]"></td>
 			</tr>
 			
 			<tr>
@@ -117,34 +122,11 @@
         </div>
       </div>
       <div id="column">
-       <!-- <div class="subnav">
-          <h2>Secondary Navigation</h2>
-          <ul>
-            <li><a href="#">Free Website Templates</a></li>
-            <li><a href="#">Free CSS Templates</a>
-              <ul>
-                <li><a href="#">Free XHTML Templates</a></li>
-                <li><a href="#">Free Web Templates</a></li>
-              </ul>
-            </li>
-            <li><a href="#">Free Website Layouts</a>
-              <ul>
-                <li><a href="#">Free Website Software</a></li>
-                <li><a href="#">Free Webdesign Templates</a>
-                  <ul>
-                    <li><a href="#">Free FireWorks Templates</a></li>
-                    <li><a href="#">Free PNG Templates</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-            <li><a href="#">Free Website Themes</a></li>
-          </ul> -->
-        	<div id="featured">
+       	<div id="featured">
 					<ul>
 						<li>
 							<h2>Aim Of RBIS</h2>
-								<img src="images/demo/rbis1.jpg" width="240" height="240" />
+								<img src="images/demo/Waterfall_stream.gif" width="240" height="240" />
 				
 							<p>The Project aim is to develop an online web 
 							application that complete information of RiverBasins 
@@ -155,27 +137,7 @@
 							</p></li>
 					</ul>
 				</div>
-<!-- 				<div class="holder">
-					<h2>Data Use Policy</h2>
-					<p>Information we receive and how it is used
-						Learn about the types of information we 
-						receive, and how that information is used.</p>
-					<ul>
-						
-						<li>Sharing and finding data </li>
-						<li><a href="#">Spatial and non-spatial data</a>
-						</li>
-					</ul>
-					<p>
-						Learn about things like local bodies
-						 and how information is shared.
-						
-						</p>
-					<p class="readmore">
-						<a href="#">Continue Reading &raquo;</a>
-					</p>
-				</div>      -->
-				 </div>
+		 </div>
       <!-- ####################################################################################################### -->
       <!-- ####################################################################################################### -->
     </div>

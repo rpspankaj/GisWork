@@ -121,8 +121,8 @@
       <!-- ####################################################################################################### -->
       <div id="content">
 	
-				<h1>Delete Comments</h1>
-				<img class="imgr" src="images/demo/contact.gif" alt="" width="125"
+				<h1><font color=#02ACEE >Feedbacks</font></h1>
+				<img class="imgr" src="images/demo/email-send.ico" alt="" width="125"
 					height="125" />
 				<p>Kerala State Remote Sensing And Environment Centre
 				Vikas Bhavan, Thiruvananthapuram-33.</p>
@@ -132,7 +132,7 @@
 					Kerala is also known for its overall high performance in
 					the literacy and health standards in country. 
 				</p>
-				<img class="imgl" src="images/demo/text.gif" alt="" width="125"
+				<img class="imgl" src="images/demo/vikas-bhavan.jpg" alt="" width="125"
 					height="125" />
 				<p>
 					KRSEC, Vikas Bhavan ,Thiruvananthapuram provides online facility to know about
@@ -143,11 +143,8 @@
 					You can give your comments. If you are interested in RBIS 
 					than join us,<strong>register yourself on our website.
 					</strong> You will get your confirmation of joining on your mail.
-				</p>
-				<p>If you have any information about River Basins of Kerala State
-				that still unknown to us than share with us.If your information is useful for us than we will make
-				that available on our website. </p>
-		
+				</p>	
+				<h1></h1>
 				<%
 					Connection connection;
 					PreparedStatement pst;
@@ -173,7 +170,7 @@
 
 
 				<div id="comments">
-					<h2>Delete Comments</h2>
+					<h2><font color="red">Delete Comments</font></h2>
 					<p>
 						<strong>Select All</strong> <input type="checkbox"
 							onClick="toggle(this)"> <strong>Delete <input
@@ -236,15 +233,27 @@
 
 
 			</div>
-			<div id="column">
-				<div class="subnav">
-					<h2>Location of KSREC</h2>
-					<%@include file="gmap.html"%>
+			 <div id="column">
+        	<div id="featured">
+					<ul>
+						<li>
+							<h1>Aim Of RBIS</h1>
+							
+								<img src="images/demo/Waterfall_stream.gif"  height="200" width="240" />
+								
+							<p>The Project aim is to develop an online web 
+							application that complete information of RiverBasins 
+							and help to plan welfare projects 
+							in the state.</p>
+							<p class="readmore">
+								<a href="#">Continue Reading &raquo;</a>
+							</p></li>
+					</ul>
 				</div>
-				</div>
-			 </div>
-			<div class="clear"></div>
+				 
+		    </div>
 		</div>
+		</div>	
 	</div>
 </body>
 </html>

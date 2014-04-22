@@ -24,7 +24,7 @@ rs=pst.executeQuery();
   <div class="rnd">
     <div id="container" class="clear">
 		
-		 <h2>Table(s)</h2>
+		 <h2> <font color=#02ACEE>LOG DETAILS</font></h2>
         <table summary="Summary Here" cellpadding="0" cellspacing="0">
           <thead>
             <tr>

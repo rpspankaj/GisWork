@@ -1,31 +1,33 @@
 <html>
-  <head>
-    <script type="text/javascript"
-	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCmd0E5g1XgaXb2v7KOw8xhFkUeLlW307k&sensor=true">
-    </script>
-    <style type="text/css">
-      html, body, #map-canvas { height: 100%; margin: 0; }
-    </style>
-    <script type="text/javascript">
-    function initialize() {
-      var map = new google.maps.Map(
-        document.getElementById('map-canvas'), {
-          center: new google.maps.LatLng(8.5,76.9),
-          zoom: 10,
-          mapTypeId: google.maps.MapTypeId.ROADMAP
-      });
+<head>
+    <title></title>
+   <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 
-      var marker = new google.maps.Marker({
-            position: new google.maps.LatLng(8.5,76.9),
-            map: map
-      });
+   
+     <link rel="stylesheet" href="google.css" type="text/css">
+        <!--<link rel="stylesheet" href="layersjs/style.css" type="text/css">-->
+    <!-- this gmaps key generated for http://openlayers.org/dev/ -->
+    <script src='http://maps.google.com/maps?file=api&amp;v=2&amp;key=AIzaSyCZkyRi_n_mfMIq6uEdKDWaxt09t6bB-OE'></script>
+    <script src="OpenLayers.js"></script>
+     
+    </head>
 
-    }
-    google.maps.event.addDomListener(window, 'load', initialize);
+ <body onload="init()">
+    <div id="map-id" class="caption"></div>
+       
+    	  <script type="text/javascript" src="layers.js"> 
     </script>
-  </head>
-  <body>
-    <div id="map-canvas"></div>
-  </body>
-</html>
+   
     
+     <script >
+    
+
+    </script>
+      	
+    	 <div id="nodelist" >
+    	 
+    	 </div>
+   
+      
+ </body>
+ </html>

@@ -1,6 +1,6 @@
 
-<%@include file="header.jsp" %>
-<%@include file="menu.jsp" %>
+<%@include file="headerlogin.jsp" %>
+<%@include file="usermenu.jsp" %>
 <%@ taglib uri="http://java.sun.com/jstl/core" prefix="c"%>
 
 <script type="text/javascript" src="scripts/temp/jquery-1.7.1.min.js"></script>
@@ -24,11 +24,15 @@ String str1="dark";
 
 <div class="wrapper row3">
   <div class="rnd">
+   <div align="center" style="color: red">
+  <%if(request.getParameter("resetpass")!=null){ %>
+					<%=request.getParameter("resetpass") %>
+				<%} %></div>
     <div id="container" class="clear">
       <!-- ####################################################################################################### -->
       <div id="content">
-        				<h1>Retrieve Password </h1>
-				<img class="imgl" src="images/demo/imgl.gif" alt="" width="125"
+        				<h1><font color=#02ACEE>Retrieve Password</font></h1>
+				<img class="imgl" src="images/demo/vikas-bhavan.jpg" alt="" width="125"
 					height="125" />
 				<p>
 					KRSEC, Vikas Bhavan ,Thiruvananthapuram provides online facility to know about
@@ -71,43 +75,16 @@ String str1="dark";
 
 		</table>
 	</form>
-<%-- <table summary="Summary Here" cellpadding="0" cellspacing="0">
-								<thead>
-									<tr>
-										<th>Old Password</th>
-										<th>New Password</th>
-										<th>Confirm</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr class="light">
-										<td><input type="hidden" id="password" name="password" value="<%=password %>">
-										<input type="password" name="oldpassword" id="oldpassword" class="validate[required,equals[password]]" /></td>
-										<td><input type="password" name="newpassword" id="newpassword"  class="validate[required,minSize[6],maxSize[30]]" /></td>
-										<td><input type="password" name="confirm" id="confirm"   class="validate[required,equals[newpassword]]"/></td>
-										
-										
-									</tr>
-									<tr class="dark">
-										<td><input type="submit" value="submit"></td>
-										
-										<td><div id="changepassword" ></div></td>
-										<td></td>
-									</tr>
-									
-								</tbody>
-							</table>
-</body>
-</html> --%>
+
       </div>
       <div id="column">
         	<div id="featured">
 					<ul>
-						<li>
-							<h2>Aim Of RBIS</h2>
-							<p class="imgholder">
-								<img src="images/demo/240x90.gif" alt="" />
-							</p>
+						  <li>
+							<h1>Aim Of RBIS</h1>
+					
+								<img src="images/demo/Waterfall_stream.gif" height="200" width="240" />
+						
 							<p>The Project aim is to develop an online web 
 							application that complete information of RiverBasins 
 							and help to plan welfare projects 
@@ -115,6 +92,7 @@ String str1="dark";
 							<p class="readmore">
 								<a href="#">Continue Reading &raquo;</a>
 							</p></li>
+					
 					</ul>
 				</div>
 				</div>      </div>

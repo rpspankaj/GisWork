@@ -101,7 +101,7 @@
         <!-- ###### -->
         <div id="right_column">
           <div class="holder">
-            <h2>House Boat</h2>
+            <h2>Tourism</h2>
             <a href="#"><img src="images/demo/boathouse.jpg" width="230" height="130"/></a> </div>
             <h2>Kerala Tradition</h2>
             <a href="#"><img src="images/demo/color.jpg" width="230" height="130"/></a> </div>

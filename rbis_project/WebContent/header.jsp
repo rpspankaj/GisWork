@@ -1,4 +1,7 @@
-
+<% response.setHeader("Cache-Control","no-cache"); //HTTP 1.1 
+ response.setHeader("Pragma","no-cache"); //HTTP 1.0 
+ response.setDateHeader ("Expires", 0); //prevents caching at the proxy server  
+%>
 <title>RBIS|GIS</title>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 <meta http-equiv="imagetoolbar" content="no" />
@@ -7,7 +10,9 @@
 <script type="text/javascript" src="scripts/jquery-1.4.1.min.js"></script>
 <script type="text/javascript" src="scripts/jquery-ui-1.7.2.custom.min.js"></script>
 <script type="text/javascript" src="scripts/jquery.tabs.setup.js"></script>
-
+<script>
+	history.forward();
+</script>
 </head>
 <body id="top">
 <div class="wrapper row1">
@@ -19,15 +24,16 @@
       
       <form method="post" action="useraction.rbis?action=list">
 		
-		 <fieldset><strong>&nbsp;UserName </strong>&emsp;&emsp;&emsp;&nbsp;&nbsp;<strong>Password</strong></fieldset>
+		 <fieldset><strong>&nbsp;UserName</strong>&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;<strong>Password</strong></fieldset>
 		 <fieldset>	
-				<input type="text" name="user_name" id="user_name" />
-				<input type="password" name="password" id="password" />
+				<input type="text" name="user_name" id="user_name" size="25"/>
+				<input type="password" name="password" id="password" size="25" />
 				<input type="submit" value="Sign In" id="submit" />
 			
 		 </fieldset>
 	<fieldset>
-	<a href="forgotpassword.jsp"><strong>Forgot Password</strong></a>
+	<font color="white"><input type="checkbox" checked><strong>Remember Me</strong>
+	<a href="forgotpassword.jsp"><strong>&emsp;&nbsp;&nbsp;&nbsp;Forgot Password</strong></a></font>
 	</fieldset>
 	</form>
 	   </div>

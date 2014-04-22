@@ -43,11 +43,15 @@
 
 <div class="wrapper row3">
   <div class="rnd">
+  <div align="center" style="color: red">
+<%if(request.getParameter("feedback")!=null){ %>
+					<%=request.getParameter("feedback") %>
+				<%} %></div>
     <div id="container" class="clear">
       <!-- ####################################################################################################### -->
       <div id="content">
-        				<h1>Contact Us</h1>
-				<img class="imgr" src="images/demo/contact.jpg" alt="" width="125"
+        					<h1><font color=#02ACEE >Give Feedback</font></h1>
+				<img class="imgr" src="images/demo/email-send.ico" alt="" width="125"
 					height="125" />
 				<p>Kerala State Remote Sensing And Environment Centre
 				Vikas Bhavan, Thiruvananthapuram-33.</p>
@@ -57,7 +61,7 @@
 					Kerala is also known for its overall high performance in
 					the literacy and health standards in country. 
 				</p>
-				<img class="imgl" src="images/demo/imgl.gif" alt="" width="125"
+				<img class="imgl" src="images/demo/vikas-bhavan.jpg" alt="" width="125"
 					height="125" />
 				<p>
 					KRSEC, Vikas Bhavan ,Thiruvananthapuram provides online facility to know about
@@ -142,40 +146,20 @@
           </ul> -->
         	<div id="featured">
 					<ul>
-						<li>
+	            	<li>
 							<h2>Aim Of RBIS</h2>
-							<p class="imgholder">
-								<img src="images/demo/240x90.gif" alt="" />
-							</p>
+								<img src="images/demo/Waterfall_stream.gif" width="240" height="240" />
+				
 							<p>The Project aim is to develop an online web 
 							application that complete information of RiverBasins 
 							and help to plan welfare projects 
-							in the state and build modern sports facilities.</p>
+							in the state and build modern facilities.</p>
 							<p class="readmore">
 								<a href="#">Continue Reading &raquo;</a>
 							</p></li>
-					</ul>
+							</ul>
 				</div>
-				<div class="holder">
-					<h2>Data Use Policy</h2>
-					<p>Information we receive and how it is used
-						Learn about the types of information we 
-						receive, and how that information is used.</p>
-					<ul>
-						
-						<li>Sharing and finding data </li>
-						<li><a href="#">Spatial and non-spatial data</a>
-						</li>
-					</ul>
-					<p>
-						Learn about things like local bodies
-						 and how information is shared.
-						
-						</p>
-					<p class="readmore">
-						<a href="#">Continue Reading &raquo;</a>
-					</p>
-				</div>      </div>
+				      </div>
       <!-- ####################################################################################################### -->
       <!-- ####################################################################################################### -->
     </div>

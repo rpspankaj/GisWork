@@ -32,12 +32,12 @@ public class CommonAction extends HttpServlet {
 			
 		}
 		if(flag){
-			response.sendRedirect("resetpass.jsp?sucess");
+			response.sendRedirect("resetpass.jsp?resetpass=your password has been changed successfully!!!");
 			//response.sendRedirect("adminforgotpass.jsp?success=your password has been send to your mail !!!");
 			
 		}
 		else{
-			response.sendRedirect("resetpass.jsp?fail");
+			response.sendRedirect("resetpass.jsp?resetpass=Some Error Occured Contact Admin !!!");
 		}
 			
 			
@@ -48,10 +48,10 @@ public class CommonAction extends HttpServlet {
 		else if(action.equalsIgnoreCase("forgotpassword")){
 			flag=Utility.forgot(email);
 			if(flag){
-				response.sendRedirect("index.jsp?sucess");
+				response.sendRedirect("forgotpassword.jsp?forgotpass=Your Password has been Send to your Mail check your Inbox !!!");
 			}
 			else{
-				response.sendRedirect("index.jsp?fail");
+				response.sendRedirect("forgotpassword.jsp?forgotpass=Some Error Occured Contact Admin !!!");
 			}
 		}
 			

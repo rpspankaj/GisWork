@@ -25,6 +25,10 @@ String str1="dark";
 
   <div class="rnd">
   <div align="center" style="color: red">
+<%if(request.getParameter("forgotpass")!=null){ %>
+					<%=request.getParameter("forgotpass") %>
+				<%} %></div>
+  <div align="center" style="color: red">
   
   <%if(request.getParameter("message_error")!=null){ %>
   			<%=request.getParameter("message_error")%>
@@ -34,14 +38,23 @@ String str1="dark";
       <div id="content">
         				<h1>Retrieve Password </h1> 
 
-				<img class="imgl" src="images/demo/imgl.gif" alt="" width="125"
+				<img class="imgl" src="images/demo/vikas-bhavan.jpg" alt="" width="125"
 					height="125" />
 				<p>
 					KRSEC, Vikas Bhavan ,Thiruvananthapuram provides online facility to know about
 					the River Basins and water sheds <a href="index.jsp"><strong>River Basin Information system.</strong>
 					</a> RBIS is a user friendly software through which you can easily get location of the River Basins of Kerala state.
 				</p>
+				<p>
+					You can give your comments. If you are interested in RBIS 
+					than join us,<strong>register yourself on our website.
+					</strong> You will get your confirmation of joining on your mail.
+				</p>
+				<p>If you have any information about River Basins of Kerala State
+				that still unknown to us than share with us.If your information is useful for us than we will make
+				that available on our website. </p>
 				
+      <h1></h1>
         
         
         <form action="CommonAction?action=forgotpassword" method="post" id="regForm">
@@ -77,9 +90,8 @@ String str1="dark";
 					<ul>
 						<li>
 							<h2>Aim Of RBIS</h2>
-							<p class="imgholder">
-								<img src="images/demo/240x90.gif" alt="" />
-							</p>
+							
+								<img src="images/demo/Waterfall_stream.gif" alt="" />
 							<p>The Project aim is to develop an online web 
 							application that complete information of RiverBasins 
 							and help to plan welfare projects 

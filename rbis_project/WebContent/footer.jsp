@@ -11,7 +11,7 @@
         Kerala<br />
         695033<br />
         Tel: 0471-2302231<br />
-        Email: <a href="#">contact@domain.com</a>
+        Email: <a href="#">rbiskerala@gmail.com</a>
         </address>
       </div>
       <div class="fl_right">

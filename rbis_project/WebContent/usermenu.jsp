@@ -4,7 +4,7 @@
     <div id="topnav">
       <ul>
         <li class="active"><a href="mainbody.jsp">Home</a></li>
-        <li><a href="viewprofile.jsp">Profile setting</a></li>
+        <li><a href="viewprofileuser.jsp">Profile setting</a></li>
         <li><a href="resetpass.jsp">Change password</a></li>
         <!-- <li><a href="newOverlayes.html">Layer preview</a></li> -->
         <li><a href="updateInformationUser.jsp">Add Information</a></li>

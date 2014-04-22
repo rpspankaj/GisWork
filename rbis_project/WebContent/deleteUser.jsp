@@ -1,7 +1,8 @@
+<%@include file="headerlogin.jsp"%>
+<%@include file="adminmenu.jsp" %>
 <%@page import="java.sql.*"%>
 <%@page import="com.rbis.listner.*"%>
 
-<%@include file="headerlogin.jsp"%>
 
 <html>
 <head>
@@ -88,7 +89,7 @@
 	<div class="wrapper row3">
 		<div class="rnd" >
 			<div id="container" class="clear" >
-				<h2>All users listed bellow</h2>
+				<h1><font color=#02ACEE >Registered Users</font></h1>
 				<p>
 					<samp style="color: #02ACEE">
 						<strong>Select All</strong><input type="checkbox"
@@ -161,7 +162,7 @@
 
 
 				<p>The User who are listed here are all the member of the
-					organization GEOSSIS.Their role is only to see the local bodies of
+					organization RBIS.Their role is only to see the local bodies of
 					sports.</p>
 				<ul>
 					<li>All the user listed here having role as general user not
@@ -169,22 +170,13 @@
 					<li>The user can be deleted in the case of their information
 						is wrong.</li>
 					<li>After deleting the user they are not able to register
-						again to GEOSSIS.</li>
+						again to RBIS.</li>
 					<li>Even though here Admin can delete all user but other admin
 						still have account that are not listed here.</li>
 					<li>As per the security level same level of user have same
 						access right.</li>
 				</ul>
-				<p>Select all option will select all the user for deleting.</p>
-				<ol>
-					<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-					<li>Etiam vel sapien et est adipiscing commodo.</li>
-					<li>Duis pharetra eleifend sapien, id faucibus dolor rutrum
-						et.</li>
-					<li>Donec et dui dolor, in lacinia leo.</li>
-					<li>Mauris posuere tellus ac purus adipiscing dapibus.</li>
-				</ol>
-			</div>
+							</div>
 		</div>
 	</div>
 

@@ -24,7 +24,7 @@ public class Utility {
 		boolean flg=false;
 		connection=DatabaseConnection.getConnection();
 		
-		String query="select user_name,password,role_id,email_id,dob,phone,fname,lname,modified_date,user_autoid from vwt_usermasterlist where user_name=? and password=?";
+		String query="select user_name,password,role_id,email_id,gender,dob,phone,fname,lname,modified_date,user_autoid from vwt_usermasterlist where user_name=? and password=?";
 		try {
 			pst=connection.prepareStatement(query);
 			pst.setString(1, obj.getUser_name());
@@ -38,6 +38,7 @@ public class Utility {
 				Security.setPassword(rs.getString("password"));
 				Security.setRole_id(rs.getInt("role_id"));
 				Security.setEmail(rs.getString("email_id"));
+				Security.setGender(rs.getString("gender"));
 				Security.setDob(rs.getTimestamp("dob"));
 				Security.setPhone(rs.getString("phone"));
 				Security.setFname(rs.getString("fname"));
@@ -87,8 +88,9 @@ public class Utility {
 		}finally{
 			if(connection!=null ){
 				try {
-					connection.close();
+					
 					pst.close(); 
+					connection.close();
 				} catch (SQLException e) {
 					System.out.println("SQLException:-"+e);
 				}
